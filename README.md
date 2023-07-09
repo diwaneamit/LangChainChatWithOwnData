@@ -7,7 +7,7 @@
 [![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)](https://platform.openai.com/apps)
 [![LangChain](https://dcbadge.vercel.app/api/server/KgmN4FPxxT?compact=true&style=flat)](https://python.langchain.com/docs/get_started/introduction.html)
 
-![Logo](https://github.com/diwaneamit/LangChainChatWithYourData/blob/main/Images/LangChain_Logo.jpg)
+![Logo](https://github.com/diwaneamit/LangChainChatWithOwnData/blob/main/Images/LangChain_Logo.jpg)
 </div>
  
 ### POC to create a chatbot using LangChain LLM
@@ -38,7 +38,7 @@ Additional Learning <a href='https://cobusgreyling.medium.com/conversational-ai-
 LangChain provides various Modules which make Chatbot Development easy for developers.
 <br><br>
 <div align='center'>
-<img src='https://github.com/diwaneamit/LangChainChatWithYourData/blob/main/Images/LangChain%20Modules.png'/>
+<img src='https://github.com/diwaneamit/LangChainChatWithOwnData/blob/main/Images/LangChain%20Modules.png'/>
 <br>Source: DeepLearnig.ai</center><br><br>
 </div>
 
@@ -47,7 +47,7 @@ LangChain provides various Modules which make Chatbot Development easy for devel
 Usually, the development of a Chatbot using LangChain with its Own Data Includes the Following Steps:<br><br>
 <br><br>
 <div align='center'>
-<img src='https://github.com/diwaneamit/LangChainChatWithYourData/blob/main/Images/LangChainProcess.png'/>
+<img src='https://github.com/diwaneamit/LangChainChatWithOwnData/blob/main/Images/LangChainProcess.png'/>
 <br>Source: DeepLearnig.ai</center><br><br>
 </div>
 <b>a. Importing Data from Diverse Sources:</b> <br>
@@ -55,7 +55,7 @@ LangChain provides over 80 document loaders, allowing developers to effortlessly
 The Details about all the loaders for Data Connection can be found <a href='https://python.langchain.com/docs/modules/data_connection/'> here</a>
 <br><br>
 <div align='center'>
-<img src='https://github.com/diwaneamit/LangChainChatWithYourData/blob/main/Images/LangChainDocumentLoaders.png'/>
+<img src='https://github.com/diwaneamit/LangChainChatWithOwnData/blob/main/Images/LangChainDocumentLoaders.png'/>
 <br>Source: DeepLearnig.ai</center><br><br>
 </div>
 In my POC I used Data Loaders for PDF, TXT File, and WebURL. <br>
@@ -72,7 +72,7 @@ loaders.append(PyPDFLoader(file_path))
 Once the documents are loaded, LangChain allows developers to divide them into smaller, more manageable chunks. This stage is critical for effective processing and addressing the complications that develop when working with large and complicated documents. This helps create pieces of text that are smaller than the original document, which is useful because we may not be able to pass the whole document to the language model. So we want to create these small chunks so we can only pass the most relevant ones to the language model. If our chunks are too small or too large, it may lead to imprecise search results or missed opportunities to surface relevant content.LangChain provides multiple types of Splitters. The most common ones are ChracterTextSplitter, TokenTextSplitter, and RecursiveCharacterTextSplitter. The details about other splitter types can be found <a href='https://python.langchain.com/docs/modules/data_connection/document_transformers/'>here</a>
 <br><br>
 <div align='center'>
-<img src='https://github.com/diwaneamit/LangChainChatWithYourData/blob/main/Images/SplitterTypes.png'/>
+<img src='https://github.com/diwaneamit/LangChainChatWithOwnData/blob/main/Images/SplitterTypes.png'/>
 <br>Source: DeepLearnig.ai</center><br><br>
 </div>
 In my POC I used CharacterTextSplitter to split the document in a chunk_size=1000
@@ -165,7 +165,7 @@ In my POC I am using the default retriever of vector-store.<br>
 In addition to retrieval, LLMs play an important role in creating exact answers to user queries. LLMs produce context-aware responses by merging retrieved documents with the user's question, allowing chatbots to participate in meaningful dialogues.LangChain provides integration to various different LLM models, details about it can be found <a href='https://python.langchain.com/docs/modules/model_io/models/llms/'>here</a>
 <br><br>
 <div align='center'>
-<img src='https://github.com/diwaneamit/LangChainChatWithYourData/blob/main/Images/RetrievalQAChain.png'/>
+<img src='https://github.com/diwaneamit/LangChainChatWithOwnData/blob/main/Images/RetrievalQAChain.png'/>
 <br>Source: DeepLearnig.ai</center><br><br>
 </div>
 The course also discusses various qa chain techniques such as Map_Reduce, Refine, and Map_rerank to improve the response. So here we can create a retrieval QA chain. This does retrieval and then does question answering over the retrieved documents.<br><br>
@@ -201,7 +201,7 @@ qa_chain = RetrievalQA.from_chain_type(
 To complete the Chatbot experience, we must add conversational aspects to the bot. Developers can design a fully working chatbot tailored to their individual needs by exploiting LangChain's Conversational Retrieval Chain features. This end-to-end solution enables users to have dynamic and engaging discussions with personalized and contextually relevant responses. More details about it can be found <a href='https://python.langchain.com/docs/modules/chains/popular/chat_vector_db'>here</a>
 <br><br>
 <div align='center'>
-<img src='https://github.com/diwaneamit/LangChainChatWithYourData/blob/main/Images/ConversationRetrievalChain.png'/>
+<img src='https://github.com/diwaneamit/LangChainChatWithOwnData/blob/main/Images/ConversationRetrievalChain.png'/>
 <br>Source: DeepLearnig.ai</center><br><br>
 </div>
 
@@ -236,7 +236,7 @@ qa_chain = ConversationalRetrievalChain.from_llm(
 ## Demo
 <br>
 
-[![Demo](https://github.com/diwaneamit/LangChainChatWithYourData/blob/main/Images/Bot.png)](https://www.youtube.com/watch?v=6XaJBEKPKso)
+[![Demo](https://github.com/diwaneamit/LangChainChatWithOwnData/blob/main/Images/Bot.png)](https://www.youtube.com/watch?v=6XaJBEKPKso)
 
 ## Run Locally
 
